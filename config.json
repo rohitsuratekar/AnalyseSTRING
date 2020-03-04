@@ -1,7 +1,7 @@
 {
   "zebrafish": {
-    "actions_temp": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/actions.temp",
-    "actions": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/7955.protein.actions.v11.0.txt",
+    "actions": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/actions.temp",
+    "actions_bak": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/7955.protein.actions.v11.0.txt",
     "full_links_temp": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/links.temp",
     "full_links": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/7955.protein.links.full.v11.0.txt",
     "info": "/mnt/windows/Enigma/Zebrafish/data/string/zebrafish/7955.protein.info.v11.0.txt"
