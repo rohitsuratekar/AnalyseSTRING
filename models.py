@@ -148,6 +148,13 @@ class NetworkGenerator:
 
         return renamed
 
+    def show_entry(self, gene1: str, gene2: str):
+        pd.set_option('display.expand_frame_repr', False)
+        d = self.links
+        d = d[d[PROTEIN_1] == self.names[gene1]]
+        d = d[d[PROTEIN_2] == self.names[gene2]]
+        print(d)
+
 
 class ClusterNode:
     def __init__(self, name):

@@ -10,5 +10,15 @@
     "actions": "/mnt/windows/Enigma/Zebrafish/data/string/human/9606.protein.actions.v11.0.txt",
     "full_links": "/mnt/windows/Enigma/Zebrafish/data/string/human/9606.protein.links.full.v11.0.txt",
     "info": "/mnt/windows/Enigma/Zebrafish/data/string/human/9606.protein.info.v11.0.txt"
+  },
+  "rat": {
+    "actions": "/mnt/windows/Enigma/Zebrafish/data/string/rat/10116.protein.actions.v11.0.txt",
+    "full_links": "/mnt/windows/Enigma/Zebrafish/data/string/rat/10116.protein.links.full.v11.0.txt",
+    "info": "/mnt/windows/Enigma/Zebrafish/data/string/rat/10116.protein.info.v11.0.txt"
+  },
+  "mouse": {
+    "actions": "/mnt/windows/Enigma/Zebrafish/data/string/mouse/10090.protein.actions.v11.0.txt",
+    "full_links": "/mnt/windows/Enigma/Zebrafish/data/string/mouse/10090.protein.links.full.v11.0.txt",
+    "info": "/mnt/windows/Enigma/Zebrafish/data/string/mouse/10090.protein.info.v11.0.txt"
   }
 }

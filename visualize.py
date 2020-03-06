@@ -26,22 +26,37 @@ def paths_to_connections(data, paths):
     return connections
 
 
-def plot_network(data, max_cols=None, show=True, color_mapping: dict = None):
+def _replace_parts(gene: str, ref: dict) -> str:
+    if ref is None:
+        return gene
+    for key in ref:
+        gene = gene.replace(key, ref[key])
+    return gene
+
+
+def plot_network(data,
+                 max_cols=None,
+                 show=True,
+                 color_mapping: dict = None,
+                 replace_names: dict = None) -> NetworkPlot:
     p = Palette()
     network_data = []
     if len(data) > len(p.get_color_list):
         colors = p.random(no_of_colors=len(data))
     else:
-        colors = p.get_color_list[len(data)]
+        colors = p.get_color_list[:len(data)]
         if len(data) == 1:
             colors = [colors]
 
     mapping_colors = {}
 
     for pair in data:
-        mapping_colors[pair[0]] = colors[len(mapping_colors)]
+        mapping_colors[pair[0]] = colors[len(mapping_colors.keys())]
         for gene in pair[1]:
-            network_data.append([pair[0], gene, 1])
+            network_data.append(
+                [_replace_parts(pair[0], replace_names),
+                 _replace_parts(gene, replace_names),
+                 1])
 
     n = NetworkPlot(network_data)
     if max_cols is not None:
@@ -52,13 +67,14 @@ def plot_network(data, max_cols=None, show=True, color_mapping: dict = None):
     else:
         n.colors_mapping = color_mapping
     n.line_decoration = False
+
     if show:
         n.show()
     return n
 
 
 def plot_connections(data, max_cols=None, show=True,
-                     color_mapping: dict = None):
+                     color_mapping: dict = None) -> NetworkPlot:
     p = Palette()
     all_nodes = []
     for d in data:
